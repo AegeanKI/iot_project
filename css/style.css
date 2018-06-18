@@ -1,0 +1,51 @@
+div[id^=bulb] {
+    position: absolute;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    margin: 0px 0px;
+    padding: 0;
+    -moz-border-radius: 99px;
+    -webkit-border-radius: 99px;
+    -khtml-border-radius: 99px;
+    border-radius: 99px;
+    box-shadow: inset 0px 10px 15px -5px rgba(10,30,60,0.1);
+    -moz-box-shadow: inset 0px 10px 15px -5px rgba(10,30,60,0.1);
+    -webkit-box-shadow: inset 0px 20px 40px -10px rgba(10,30,60,0.1);
+    overflow: hidden;
+}
+img{
+    position: relative;
+}
+/*the img is 1024*792*/
+.bulb_container{
+    position: relative;
+    top: -792px;
+    left:0px;
+}
+.bulb-top{
+    width :30px;
+    height: 30px;
+}
+#bulb1{
+    top: 230px;
+    left: 195px;
+    margin: 0 ;
+}
+#bulb2{
+    /*background-color: transparent;*/
+    top: 230px;
+    left: 806px;
+    margin: 0;
+}
+#bulb3{
+    /*background-color: green;*/
+    top: 439px;
+    left: 315px;
+    margin: 0;
+}
+#bulb4{
+    top: 480px;
+    left: 806px;
+    margin: 0;
+}
