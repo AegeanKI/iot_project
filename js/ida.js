@@ -8,9 +8,9 @@
 
         // };
         var profile = {
-            'dm_name': 'Bulb',          
+            'dm_name': 'project9',          
             'idf_list':[],
-            'odf_list':[Color_O, Luminance],         
+            'odf_list':[degree],         
         };
 
         var r = 255 ;
@@ -38,14 +38,14 @@
 
 
 
-        function Luminance (data){
-            console.log(data);
-            // $('font')[0].innerText=data[0];
-            lum = data[0];
-            draw();
-        }
+        // function Luminance (data){
+        //     console.log(data);
+        //     // $('font')[0].innerText=data[0];
+        //     lum = data[0];
+        //     draw();
+        // }
 
-        function Color_O (data){
+        function degree (data){
             //$('font')[0].innerText=data[0];
             console.log(data);
             light_degree = data[0];
