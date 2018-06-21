@@ -8,8 +8,8 @@
 
         // };
         var profile = {
-            'dm_name': 'project9',          
-            'idf_list':[],
+            'dm_name': 'project7',          
+            'idf_list':[LED_position],
             'odf_list':[degree],         
         };
 
@@ -18,24 +18,31 @@
         var b = 0;
         var lum = 100;
 
+        var bulb = [0, 0, 0, 0];
         function draw (degree, num) {
             // var rr = Math.floor((r * lum) / 100);
             // var gg = Math.floor((g * lum) / 100);
             // var bb = Math.floor((b * lum) / 100);
             // console.log("(r,g,b)=(",r,g,b,")")
-            if(degree < 300){
+            if(degree < 300 || (degree > 28 && num == 4)){
+                bulb[num-1] = 1;
                 $('[id^=bulb'+num+']').children().css(
                     {'background': 'rgb('+ 255 +', '+ 0 +', '+ 0 +')'}
                 );
             }
             else{
+                bulb[num-1] = 0;
                 $('[id^=bulb'+num+']').children().css(
                     {'background': 'rgb('+ 0 +', '+ 255 +', '+ 0 +')'}
                 );
             }
             // $('#bulb4').children().css({'background' : 'rgb(255,0,0)'})
         }
-
+        
+        function LED_position(){
+            console.log(bulb);
+            return bulb;
+        }
 
 
         // function Luminance (data){
