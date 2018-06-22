@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 div[id^=bulb] {
     position: absolute;
     border: 0;
@@ -16,6 +19,19 @@ div[id^=bulb] {
 }
 img{
     position: relative;
+    /*left: calc( 100% - 1024px );*/
+    z-index: -1;
+}
+#map-container{
+    margin-left: calc( 50% - 512px );
+}
+legend{
+    text-align: center;
+    font-weight: 200;
+    font-size: 32pt;
+    background-color: white;
+    box-shadow: 0 0 15px #999;
+    z-index: 1;
 }
 /*the img is 1024*792*/
 .bulb_container{

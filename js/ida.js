@@ -24,7 +24,7 @@
             // var gg = Math.floor((g * lum) / 100);
             // var bb = Math.floor((b * lum) / 100);
             // console.log("(r,g,b)=(",r,g,b,")")
-            if(degree < 300 || (degree > 28 && num == 4)){
+            if((degree < 300 && num != 4)|| (degree > 28 && num == 4)){
                 bulb[num-1] = 1;
                 $('[id^=bulb'+num+']').children().css(
                     {'background': 'rgb('+ 255 +', '+ 0 +', '+ 0 +')'}
@@ -36,6 +36,16 @@
                     {'background': 'rgb('+ 0 +', '+ 255 +', '+ 0 +')'}
                 );
             }
+            var flag = 0;
+            for (var i = bulb.length - 1; i >= 0; i--) {
+                if(bulb[i] == 1)
+                    flag = 1;
+            }
+            if(flag)
+                $('legend').css({'background': 'rgb(255,0,0)'});
+            else
+                $('legend').css({'background': 'rgb(0,255,0)'});
+
             // $('#bulb4').children().css({'background' : 'rgb(255,0,0)'})
         }
         
